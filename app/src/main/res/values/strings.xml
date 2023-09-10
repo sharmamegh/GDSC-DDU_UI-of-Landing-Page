@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">GDSC DDU</string>
     <string name="upcoming_events_2">Upcoming Events (2)</string>
+    <string name="events">Events</string>
+    <string name="registered_events">Registered Events</string>
+    <string name="members">Members</string>
+    <string name="dsc_ddu">DSC DDU</string>
+    <string name="user_profile">user profile</string>
 </resources>

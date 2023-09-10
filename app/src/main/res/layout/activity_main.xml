@@ -8,31 +8,184 @@
 
     <view
         class="com.google.android.material.navigation.NavigationBarView"
-        android:id="@+id/rectangle_4"
+        android:id="@+id/nav_2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="#CF9932D8" />
+        android:background="#CF9932D8" >
 
-    <TextView
-        android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Profile Button (rounded) -->
+            <ImageButton
+                android:id="@+id/imageButtonLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:contentDescription="@string/user_profile"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:src="@drawable/unsplash_ilip77sbmoe"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry,ImageContrastCheck" />
+
+            <!-- TextView for displaying text -->
+            <TextView
+                android:id="@+id/dsc_ddu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dsc_ddu"
+                android:textSize="24sp"
+                android:minHeight="48dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginStart="110dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </LinearLayout>
+    </view>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/upcoming_events_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/nav_2"
+        app:layout_constraintBottom_toTopOf="@id/nav_1">
+
+        <TextView
+            android:id="@+id/upcoming_ev"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="85dp"
+            android:minHeight="48dp"
+            android:text="@string/upcoming_events_2"
+            android:textSize="29sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck" />
+    </LinearLayout>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/rectangle_1"
+        android:id="@+id/nav_1"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="#CF9932D8"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="VisualLintBottomNav" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintBottomNav" >
+
+        <!-- LinearLayout container for buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <!-- Nested LinearLayout for buttons and subsequent text -->
+            <LinearLayout
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:id="@+id/ic_round_ca"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/events"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/ic_round_category"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/events"
+                    android:textColor="@color/white"
+                    tools:ignore="TextContrastCheck"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:ignore="TextSizeCheck">
+
+                <ImageButton
+                    android:id="@+id/vector"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/registered_events"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/vector"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/registered_events"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    tools:ignore="TextContrastCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:id="@+id/gridIcons_m"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/members"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/gridicons_multiple_users"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/members"
+                    android:textColor="@color/white"
+                    tools:ignore="TextContrastCheck"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+        
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
